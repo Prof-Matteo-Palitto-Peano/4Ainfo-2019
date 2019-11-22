@@ -12,7 +12,7 @@ Questo esercizio vuole mostrare come i threads vengono eseguiti contemporaneamen
   - Classe **CiaoHiHello** che avvia 3 threads usando sempre la classe **Say** una per dire **Ciao** una per dire **Hi** e una per dire **Hello**
   Questo esercizio vuole sottolineare che si possono crare più **threads** usando la stessa classe
   
-  ## 16 Novembre - Esercizi Multi-Threading
+  ## 23 Novembre - Esercizi Multi-Threading
   1. Realizzare 1 classe che estende la classe **Thread**
     - classe **Inc1000** al cui interno possiede una variabile **STATIC** (count) e che esegua un ciclo **for** che incrementi la variabile ``(count = count +1)`` 1000 volte. (**Nota Bene:** inserire tra un incremento e il successivo un intervallo di 1ms usando la seguente instruzione: ``Thread.sleep(1);``)
     - classe **TestInc1000** che avvia 2 thread usando la classe **Inc1000** e quindi stampi il risultato su schermo. **Nota Bene:** Per accedere alla variabile **count** posso usare la seguente sintassi: ``inc1000.count``... per quale motivo?
