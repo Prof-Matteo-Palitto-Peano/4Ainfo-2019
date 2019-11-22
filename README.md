@@ -14,9 +14,17 @@ Questo esercizio vuole mostrare come i threads vengono eseguiti contemporaneamen
   
   ## 16 Novembre - Esercizi Multi-Threading
   1. Realizzare 1 classe che estende la classe **Thread**
-    - classe **Inc1000** al cui interno possiede una variabile **STATIC** (count) e che esegua un ciclo **for** che incrementi la variabile 1000 volte
-    - classe **TestInc1000** che avvia 2 thread usando la classe **Inc1000** e quindi stampino il risultato su schermo
+    - classe **Inc1000** al cui interno possiede una variabile **STATIC** (count) e che esegua un ciclo **for** che incrementi la variabile ``(count = count +1)`` 1000 volte. (**Nota Bene:** inserire tra un incremento e il successivo un intervallo di 1ms usando la seguente instruzione: ``Thread.sleep(1);``)
+    - classe **TestInc1000** che avvia 2 thread usando la classe **Inc1000** e quindi stampi il risultato su schermo. **Nota Bene:** Per accedere alla variabile **count** posso usare la seguente sintassi: ``inc1000.count``... per quale motivo?
  Questo esercizio vuole mostrare che anche **main** viene eseguito in un thread e può terminare prima degli altri threads che avvia.
+ * dare spiegazione del motivo che posso accedere alla variabile **count** usando il nome della classe invece del nome dell'oggetto.
+ * dare spiegazione del risultato ottenuto
  
  2. Modificare il **main** dell'esercizio **1** per aspettare che i 2 threads avviati terminino prima di stampare su schermo il risultato.
- 
+ Questo esercizio vuole mostrare il verificarsi dei conflitti durante l'accesso alla variabile condivisa.
+  * dare spiegazione del risultato ottenuto
+  
+ 3. Modificare il codice per eliminare il conflitto tra i 2 threads
+ * usare la parola chiave **syncronized** con il metodo **inc1()** che esegue l'incremento di 1.
+ * dare la spiegazione teorica del risultato ottenuto
+
